@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import axios from "../axios";
 import { useState, useEffect, createContext } from "react";
 
@@ -7,13 +5,17 @@ const AppContext = createContext({
   data: [],
   isError: "",
   cart: [],
+  // eslint-disable-next-line no-unused-vars
   addToCart: (product) => {},
+  // eslint-disable-next-line no-unused-vars
   removeFromCart: (productId) => {},
   refreshData:() =>{},
+  // eslint-disable-next-line no-unused-vars
   updateStockQuantity: (productId, newQuantity) =>{}
   
 });
 
+// eslint-disable-next-line react/prop-types
 export const AppProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [isError, setIsError] = useState("");
